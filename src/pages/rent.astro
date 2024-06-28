@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardSub from '../components/Card-sub.astro';
+import { Image } from 'astro:assets';
+import image1 from '../assets/around/kazamatsuri-stn.jpg';
+import image2 from '../assets/around/hayakawa.jpg';
+import image3 from '../assets/around/suzuhiro-front.jpg';
+import image5 from '../assets/bamboo-thicket.jpg';
+
+import '@fontsource/shippori-mincho';
+---
+
+<Layout title="貸出">
+  <div class="container">
+    <div class="inner-container">
+      <h1>高橋別荘の建物と庭園を貸し出しいたします</h1>
+      <h2>あなたのアイディアで築100年の古民家を再活してください</h2>
+      <br />
+      <ul>
+        <li>写真撮影会</li>
+        <li>音楽会</li>
+        <li>お茶会、食事会</li>
+      </ul>
+      <br />
+      <p>上記に限らず「こんな風に使ってみたい」というご希望をお寄せください</p>
+      <br />
+      <p>料金：1時間　千円</p>
+      <br />
+      <p>建物工事の発生などにより利用のご希望に添えない場合があります</p>
+      <br />
+      <p>お問い合わせはこちらから</p>
+      <br />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    background: #f7eaf5cc;
+    display: grid;
+    /* grid-template-columns: 1fr minmax(80% 200px) 1fr; */
+
+    @media (max-width: 496px) {
+      width: 80%;
+    }
+  }
+
+  .inner-container {
+    /* grid-column: 2 / -2; */
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    /* background: #f7eaf5cc; */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    /* background: #f7eaf5cc; */
+  }
+
+  ul {
+    list-style: circle;
+    padding-left: 40px;
+  }
+</style>

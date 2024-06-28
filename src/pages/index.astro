@@ -27,8 +27,8 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
   <body transition:animate={fade({ duration: '1s' })}>
     <hero class="page-hero">
       <Image class="photo-hero" src={image1} alt={`cottage`} quality="mid" />
-      <h1 class="page-title">
-        <p>小田原 風祭</p>髙橋別荘
+      <h1 class="page-title font-large text-2xl">
+        <p class="text-3xl">小田原 風祭</p><p class="text-5xl">髙橋別荘</p>
       </h1>
       <div class="card-tops">
         <CardTop href="/garden/" title="Garden" body="庭園" image={image3} />
@@ -94,7 +94,6 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
       }
 
       .page-title > p {
-        font-size: medium;
         margin: 0px;
       }
 
@@ -103,7 +102,7 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
       }
 
       .card-tops {
-        grid-column: 2 /-2;
+        grid-column: 2 / -2;
         display: grid;
         gap: 20px;
       }
