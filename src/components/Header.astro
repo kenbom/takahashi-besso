@@ -1,4 +1,5 @@
 ---
+import DrawerHeader from '../components/Drawer-header.astro';
 interface Props {
   title: string;
 }
@@ -28,6 +29,10 @@ const { title } = Astro.props;
     <a href="/rent/">
       <p>貸出</p>
     </a>
+    <div class="navi">
+      <DrawerHeader />
+    </div>
+    <div></div>
   </div>
 </div>
 
@@ -55,16 +60,31 @@ const { title } = Astro.props;
 
   a {
     text-decoration: none;
+    @media (max-width: 496px) {
+      display: none;
+    }
   }
 
   h2 {
     margin-top: 0px;
     font-size: 2rem;
+    font-weight: bold;
+    @media (max-width: 496px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     writing-mode: vertical-lr;
     margin: 1px;
     color: rgb(27, 25, 25);
+  }
+
+  .navi {
+    display: none;
+    @media (max-width: 496px) {
+      display: flex;
+      justify-self: end;
+    }
   }
 </style>
