@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InquiryForm from '../components/InquiryForm.svelte';
+---
+
+<Layout title="お問合せ">
+  <div class="container">
+    <div class="inner-container">
+      <InquiryForm client:load />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    background: #f7eaf5cc;
+    display: grid;
+    /* grid-template-columns: 1fr minmax(80% 200px) 1fr; */
+
+    @media (max-width: 496px) {
+      width: 80%;
+    }
+  }
+
+  .inner-container {
+    /* grid-column: 2 / -2; */
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    /* background: #f7eaf5cc; */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    /* background: #f7eaf5cc; */
+  }
+
+  ul {
+    list-style: circle;
+    padding-left: 40px;
+  }
+</style>
